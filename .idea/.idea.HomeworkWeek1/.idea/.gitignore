@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/projectSettingsUpdater.xml
+/contentModel.xml
+/modules.xml
+/.idea.HomeworkWeek1.iml
+# Datasource local storage ignored files
+/../../../../../../../:\Learning\Unity\HomeworkWeek1\.idea\.idea.HomeworkWeek1\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
