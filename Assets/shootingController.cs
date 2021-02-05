@@ -13,12 +13,16 @@ public class shootingController : MonoBehaviour
     
     public void SpawnArrow(GameObject player, Vector3 target)
     {
-        var spawnerTransform = arrowSpawner.transform;
-        player.transform.LookAt(target);
-        var arrow = Instantiate(arrowPrefab, spawnerTransform.position,
-            Quaternion.LookRotation(target.normalized));
-
-        arrow.GetComponent<Rigidbody>().velocity = new Vector3(target.x,
-            1, target.z).normalized * speed;
+        var ray = new Ray(arrowSpawner.transform.position, target);
+        if (Physics.Raycast(ray, out var hit))
+        {
+            player.transform.LookAt(target);
+            var arrow = Instantiate(arrowPrefab, arrowSpawner.transform.position,
+                player.transform.rotation);
+            gameObject.transform.LookAt(target);
+            arrow.transform.LookAt(target);
+        
+            arrow.GetComponent<Rigidbody>().velocity = transform.forward * speed;
+        }
     }
 }

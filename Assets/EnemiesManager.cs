@@ -25,7 +25,6 @@ public class EnemiesManager : MonoBehaviour
 
     void SpawnEnemy()
     {
-        Debug.Log(_terrainPosition + " " + _terrainDimensions);
         var minX = _terrainPosition.x + Borders;
         var maxX = _terrainDimensions.x - Borders;
         

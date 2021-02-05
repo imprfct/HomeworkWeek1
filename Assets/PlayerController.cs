@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     
     [SerializeField]
     public float speed = 10f;
+
+    public float attackRadius = 50;
     
     [SerializeField] 
     private GameObject bow;
@@ -80,6 +82,12 @@ public class PlayerController : MonoBehaviour
         
         foreach (var enemy in enemies)
         {
+            var distanceToEnemy = Vector3.Distance(transform.position,
+                enemy.transform.position);
+            
+            if(distanceToEnemy > attackRadius)
+                continue;
+            
             Vector3 diff = enemy.transform.position - position;
             float curDistance = diff.sqrMagnitude;
             if (curDistance < distance)
@@ -88,7 +96,7 @@ public class PlayerController : MonoBehaviour
                 distance = curDistance;
             }
         }
-
+        
         return closest;
     }
     
