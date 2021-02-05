@@ -58,6 +58,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CameraController.cs" />
      <Compile Include="Assets\EnemiesManager.cs" />
      <Compile Include="Assets\HitManager.cs" />
      <Compile Include="Assets\PlayerController.cs" />

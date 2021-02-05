@@ -193,9 +193,9 @@ GameObject:
   - component: {fileID: 632064823}
   - component: {fileID: 632064822}
   - component: {fileID: 632064825}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1610,6 +1610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 166859953}
   speed: 10
+  attackRadius: 50
   bow: {fileID: 7235375372882105616}
 --- !u!195 &7259723580141453728
 NavMeshAgent:
