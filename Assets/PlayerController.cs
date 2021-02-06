@@ -44,11 +44,14 @@ public class PlayerController : MonoBehaviour
             var ray = Camera.main.ScreenPointToRay(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1));
             if (Physics.Raycast(ray, out var hit, Mathf.Infinity))
             {
-                _animator.SetBool(IsWalking, false);
-                _animator.SetBool(IsRunning, false);
-                var targetPosition = hit.point;
-                target.transform.position = targetPosition;
-                _isWalking = true;
+                if (hit.collider.gameObject.tag != "Player")
+                {
+                    _animator.SetBool(IsWalking, false);
+                    _animator.SetBool(IsRunning, false);
+                    var targetPosition = hit.point;
+                    target.transform.position = targetPosition;
+                    _isWalking = true;
+                }
             }
         }
     }

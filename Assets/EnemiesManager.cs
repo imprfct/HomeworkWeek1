@@ -35,7 +35,7 @@ public class EnemiesManager : MonoBehaviour
         Instantiate(enemyPrefab, spawnPos, Quaternion.identity).GetComponent<enemyController>().target = player;
     }
 
-    private float newEnemyCooldown = 200f;
+    private float newEnemyCooldown = 150f;
     private void FixedUpdate()
     {
         newEnemyCooldown -= Time.fixedDeltaTime * 100;

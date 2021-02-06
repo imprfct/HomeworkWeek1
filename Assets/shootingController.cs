@@ -16,6 +16,13 @@ public class shootingController : MonoBehaviour
         var ray = new Ray(arrowSpawner.transform.position, target);
         if (Physics.Raycast(ray, out var hit))
         {
+            // Позже реализовать плавное движение...
+            
+            /*Vector3 direction = target - player.transform.position;
+            Quaternion rotation = Quaternion.LookRotation(direction);
+            player.transform.rotation = Quaternion.Lerp(player.transform.rotation,
+                rotation, 5 * Time.fixedDeltaTime);*/
+            
             player.transform.LookAt(target);
             var arrow = Instantiate(arrowPrefab, arrowSpawner.transform.position,
                 player.transform.rotation);

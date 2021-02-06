@@ -284,6 +284,7 @@ GameObject:
   - component: {fileID: 1562523005}
   - component: {fileID: 1562523004}
   - component: {fileID: 1562523003}
+  - component: {fileID: 1562523006}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -350,12 +351,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1562523002}
   m_LocalRotation: {x: 0.4090156, y: -0, z: -0, w: 0.91252744}
-  m_LocalPosition: {x: 100.07, y: 19.150003, z: 49.345623}
+  m_LocalPosition: {x: 100.07, y: 20, z: 39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 48.286003, y: 0, z: 0}
+--- !u!114 &1562523006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562523002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40038fb086a747489202fb99985df80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 7259723580141453726}
 --- !u!1 &1775709182
 GameObject:
   m_ObjectHideFlags: 0
@@ -1591,7 +1605,7 @@ GameObject:
   - component: {fileID: 7259723580141453731}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1610,7 +1624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 166859953}
   speed: 10
-  attackRadius: 50
+  attackRadius: 30
   bow: {fileID: 7235375372882105616}
 --- !u!195 &7259723580141453728
 NavMeshAgent:
@@ -1879,9 +1893,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7259723580141453726}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 97.48, y: 0, z: 55.55}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
+  m_LocalPosition: {x: 100.1, y: 0, z: 55.55}
+  m_LocalScale: {x: 2, y: 2.0000002, z: 2.0000002}
   m_Children:
   - {fileID: 3210238857737714781}
   - {fileID: 8037950206756772909}
