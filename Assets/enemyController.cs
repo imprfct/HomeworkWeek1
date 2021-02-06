@@ -9,14 +9,15 @@ public class enemyController : MonoBehaviour
     private NavMeshAgent _agent;
     
     public GameObject target;
-    
+    public bool isDead;
     private void Awake()
     {
         _agent = GetComponent<NavMeshAgent>();
     }
-    
+
     private void Update()
     {
-        _agent.destination = target.transform.position;
+        if(!isDead)
+            _agent.destination = target.transform.position;
     }
 }

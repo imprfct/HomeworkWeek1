@@ -6,8 +6,11 @@ public class HitManager : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
+            var animator = other.gameObject.GetComponent<Animator>();
+            animator.SetBool("isDead", true);
+            other.gameObject.GetComponent<enemyController>().isDead = true;
             // destroy enemy
-            Destroy(other.gameObject);
+            Destroy(other.gameObject, 4.6f);
         }
         // destroy arrow
         Destroy(gameObject);

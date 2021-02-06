@@ -77,7 +77,6 @@ public class PlayerController : MonoBehaviour
     GameObject FindClosestEnemy()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-
         float distance = Mathf.Infinity;
         Vector3 position = transform.position;
 
@@ -85,6 +84,9 @@ public class PlayerController : MonoBehaviour
         
         foreach (var enemy in enemies)
         {
+            if (enemy.GetComponent<enemyController>().isDead)
+                continue;
+            
             var distanceToEnemy = Vector3.Distance(transform.position,
                 enemy.transform.position);
             
@@ -99,7 +101,7 @@ public class PlayerController : MonoBehaviour
                 distance = curDistance;
             }
         }
-        
+
         return closest;
     }
     
